@@ -1,2 +1,2 @@
 # mroya-child
-Child theme for Mroya WordPress theme
+Child theme for Mroya WordPress theme.
