@@ -1,6 +1,7 @@
 /*-------------------------------------------------------
-Fire on window load
+Section "Clients"
 -------------------------------------------------------*/
-window.addEventListener( 'load', () => {
-	// Type here
-} );
+
+.section--clients .clients-list__item {
+	visibility: hidden;
+}

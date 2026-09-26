@@ -1,6 +1,7 @@
 /*-------------------------------------------------------
-Fire on window load
+Section "Testimonials"
 -------------------------------------------------------*/
-window.addEventListener( 'load', () => {
-	// Type here
-} );
+
+.section--testimonials .testimonials-list__item {
+	visibility: hidden;
+}

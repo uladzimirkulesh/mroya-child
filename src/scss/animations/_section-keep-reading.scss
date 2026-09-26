@@ -1,6 +1,7 @@
 /*-------------------------------------------------------
-Fire on window load
+Section "Keep Reading"
 -------------------------------------------------------*/
-window.addEventListener( 'load', () => {
-	// Type here
-} );
+
+.section--keep-reading .wp-block-post {
+	visibility: hidden;
+}

@@ -1,6 +1,7 @@
 /*-------------------------------------------------------
-Fire on window load
+Section "Contacts"
 -------------------------------------------------------*/
-window.addEventListener( 'load', () => {
-	// Type here
-} );
+
+.section--contacts .section__text > * {
+	opacity: 0.2;
+}

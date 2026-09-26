@@ -1,6 +1,7 @@
 /*-------------------------------------------------------
-Fire on window load
+Section "Features"
 -------------------------------------------------------*/
-window.addEventListener( 'load', () => {
-	// Type here
-} );
+
+.section--features .featured-list__item {
+	visibility: hidden;
+}

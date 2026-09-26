@@ -103,6 +103,11 @@ function mroya_child_editor_style() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	// Editor styles
-	add_editor_style( get_stylesheet_directory_uri() . '/style' . $suffix . '.css' );
+	$editor_styles = array(
+		get_parent_theme_file_uri( 'style' . $suffix . '.css' ),
+		get_stylesheet_directory_uri() . '/style' . $suffix . '.css',
+	);
+
+	add_editor_style( $editor_styles );
 }
 add_action( 'after_setup_theme', 'mroya_child_editor_style' );

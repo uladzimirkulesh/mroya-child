@@ -1,6 +1,7 @@
 /*-------------------------------------------------------
-Fire on window load
+Section "Mission"
 -------------------------------------------------------*/
-window.addEventListener( 'load', () => {
-	// Type here
-} );
+
+.section--mission .wp-block-cover__image-background {
+	transform: scale(1.05);
+}
