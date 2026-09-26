@@ -2,5 +2,5 @@
 Fire on window load
 -------------------------------------------------------*/
 window.addEventListener( 'load', () => {
-	// Type here
+	// Type your code here...
 } );

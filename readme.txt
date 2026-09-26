@@ -10,7 +10,7 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 == Description ==
 
-Mroya Child theme
+Child theme for Mroya WordPress theme.
 
 == Installation ==
 

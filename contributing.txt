@@ -1,4 +1,4 @@
-=== Contributing to Mroya ===
+=== Contributing to Mroya Child ===
 
 = Minifying CSS and JS =
 
