@@ -95,7 +95,7 @@ add_action( 'wp_enqueue_scripts', 'mroya_child_assets' );
 /**
  * Enqueues editor styles
  *
- * @since Mroya 1.0.0
+ * @since Mroya Child 1.0.0
  *
  * @return void
  */
