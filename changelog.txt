@@ -1,2 +1,7 @@
+1.1.0: Nov 15, 2026
+- NEW: Unregisters block patterns in functions.php.
+- NEW: Unregister styles in editor.js.
+- IMPROVEMENT: Code readability.
+
 1.0.0: Sep 26, 2026
 - NEW: First release.

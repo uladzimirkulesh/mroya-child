@@ -1,6 +1,6 @@
 <?php
 /**
- * Mroya Child functions and definitions
+ * Mroya Child functions and definitions.
  *
  * When using a child theme (see http://codex.wordpress.org/Theme_Development
  * and http://codex.wordpress.org/Child_Themes), you can override certain
@@ -14,17 +14,16 @@
  */
 
 /**
- * Enqueue styles and scripts
+ * Enqueue styles and scripts.
  *
  * @since Mroya Child 1.0.0
- *
  * @return void
  */
 function mroya_child_assets() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	$version = wp_get_theme()->get( 'Version' );
 
-	// Child theme stylesheet
+	// Child theme stylesheet.
 	wp_enqueue_style(
 		'mroya-child-style',
 		get_stylesheet_directory_uri() . '/style' . $suffix . '.css',
@@ -37,7 +36,7 @@ function mroya_child_assets() {
 		get_stylesheet_directory() . '/style' . $suffix . '.css'
 	);
 
-	// Child theme scripts
+	// Child theme scripts.
 	wp_enqueue_script(
 		'mroya-child-screen',
 		get_stylesheet_directory_uri() . '/assets/js/screen' . $suffix . '.js',
@@ -53,10 +52,10 @@ function mroya_child_assets() {
 
 	/**
 	 * Enqueue styles and scripts only if the Mroya Premium
-	 * plugin is installed and activated
+	 * plugin is installed and activated.
 	 */
 	if ( wp_script_is( 'mroya-premium-screen', 'registered' ) ) {
-		// Animations stylesheet
+		// Animations stylesheet.
 		wp_enqueue_style(
 			'mroya-child-animations',
 			get_stylesheet_directory_uri() . '/assets/css/animations' . $suffix . '.css',
@@ -72,7 +71,7 @@ function mroya_child_assets() {
 			get_stylesheet_directory() . '/assets/css/animations' . $suffix . '.css'
 		);
 
-		// Animations scripts
+		// Animations scripts.
 		wp_enqueue_script(
 			'mroya-child-animations',
 			get_stylesheet_directory_uri() . '/assets/js/animations' . $suffix . '.js',
@@ -93,16 +92,15 @@ function mroya_child_assets() {
 add_action( 'wp_enqueue_scripts', 'mroya_child_assets' );
 
 /**
- * Enqueues editor styles
+ * Enqueues editor styles.
  *
  * @since Mroya Child 1.0.0
- *
  * @return void
  */
 function mroya_child_editor_style() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-	// Editor styles
+	// Editor styles.
 	$editor_styles = array(
 		get_parent_theme_file_uri( 'style' . $suffix . '.css' ),
 		get_stylesheet_directory_uri() . '/style' . $suffix . '.css',
@@ -111,3 +109,30 @@ function mroya_child_editor_style() {
 	add_editor_style( $editor_styles );
 }
 add_action( 'after_setup_theme', 'mroya_child_editor_style' );
+
+/**
+ * Unregisters block patterns.
+ *
+ * @since Mroya Personal 1.1.0
+ * @return void
+ */
+function mroya_personal_unregister_block_patterns() {
+	// unregister_block_pattern( 'mroya/page-about' );
+	// unregister_block_pattern( 'mroya/page-contact' );
+	// unregister_block_pattern( 'mroya/section-about' );
+	// unregister_block_pattern( 'mroya/section-awards' );
+	// unregister_block_pattern( 'mroya/section-clients' );
+	// unregister_block_pattern( 'mroya/section-contact' );
+	// unregister_block_pattern( 'mroya/section-contacts' );
+	// unregister_block_pattern( 'mroya/section-faq' );
+	// unregister_block_pattern( 'mroya/section-features' );
+	// unregister_block_pattern( 'mroya/section-hero-2' );
+	// unregister_block_pattern( 'mroya/section-hero-3' );
+	// unregister_block_pattern( 'mroya/section-hero' );
+	// unregister_block_pattern( 'mroya/section-keep-reading' );
+	// unregister_block_pattern( 'mroya/section-mission' );
+	// unregister_block_pattern( 'mroya/section-services' );
+	// unregister_block_pattern( 'mroya/section-team' );
+	// unregister_block_pattern( 'mroya/section-testimonials' );
+}
+add_action( 'init', 'mroya_personal_unregister_block_patterns', 999 );
