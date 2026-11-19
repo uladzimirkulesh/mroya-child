@@ -44,11 +44,6 @@ function mroya_child_assets() {
 		$version,
 		true
 	);
-	wp_script_add_data(
-		'mroya-child-screen',
-		'path',
-		get_stylesheet_directory() . '/assets/js/screen' . $suffix . '.js',
-	);
 
 	/**
 	 * Enqueue styles and scripts only if the Mroya Premium
@@ -81,11 +76,6 @@ function mroya_child_assets() {
 			),
 			$version,
 			true
-		);
-		wp_script_add_data(
-			'mroya-child-animations',
-			'path',
-			get_stylesheet_directory() . '/assets/js/animations' . $suffix . '.js'
 		);
 	}
 }
